@@ -30,7 +30,7 @@ for index, row in df.iterrows():
 
     # 获取国家的经纬度坐标
     country_coordinates = get_country_coordinates(country)
-    # 计算颜色值
+    # 定义的颜色渐变范围
     if population <= 50:
         color = '#00FF00'  # 绿色
     elif population <= 75:
@@ -48,7 +48,7 @@ for index, row in df.iterrows():
                         # color='grey'
                         ).add_to(world_map)
 
-# 添加一个简单的图例
+# HTML界面展示的颜色bar
 legend_html = '''
 <style>
     .legend {
