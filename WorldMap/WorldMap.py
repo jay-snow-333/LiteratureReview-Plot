@@ -20,7 +20,7 @@ def get_country_coordinates(country):
 world_map = folium.Map(zoom_start=2)
 
 # 加载包含国家边界的 GeoJSON 数据，只需加载一次
-geo_json_data = 'world-countries.json'
+geo_json_data = 'WorldMap/world-countries.json'
 folium.GeoJson(geo_json_data, name='geojson').add_to(world_map)
 
 # 循环处理每个国家
@@ -84,5 +84,5 @@ legend_html = '''
 world_map.get_root().html.add_child(folium.Element(legend_html))
 
 # 保存地图为 HTML 文件，或者直接显示在 Jupyter Notebook 中
-world_map.save('world_population_map.html')
+world_map.save('WorldMap/world_population_map.html')
 world_map
